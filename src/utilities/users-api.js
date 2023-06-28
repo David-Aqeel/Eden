@@ -1,5 +1,6 @@
 // we need a base path that we can use to refer our requests to the location of our routes 
-const BASE_URL = '/api/users'
+// const BASE_URL = '/api/users'
+const BASE_URL = 'https://eden-nursery.onrender.com/api/users'
 
 export async function signUp(userData) {
     // fetch uses an options obj as a second arg to make requests
