@@ -55,3 +55,10 @@ export function logOut() {
     localStorage.removeItem('token')
 
 }
+
+export function checkToken() {
+    return usersAPI.checkToken()
+        // checkToken returns a string, but let's 
+        // make it a Date object for more flexibility
+        .then(dateStr => new Date(dateStr));
+}
