@@ -23,7 +23,6 @@ async function create (req, res) {
         const user = await User.create(req.body);
 
         const token = createJWT(user);
-        console.log ('this is the token in signup', token)
         res.json(token)
 
     } catch (err) {

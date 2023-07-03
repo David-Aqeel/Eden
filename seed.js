@@ -7,39 +7,30 @@ const Item = require('./models/item');
 (async function() {
   await Category.deleteMany({});
   const categories = await Category.create([
-    {name: 'Shrubs-Sandwiches', sortOrder: 10},
-    {name: 'Trees-Seafood', sortOrder: 20},
-    {name: 'Fruit-Trees-Mexican', sortOrder: 30},
-    {name: 'Herbs-Italian', sortOrder: 40},
-    {name: 'Sides', sortOrder: 50},
+    {name: 'Shrubs', sortOrder: 10},
+    {name: 'Trees', sortOrder: 20},
+    {name: 'Fruit-Trees', sortOrder: 30},
+    {name: 'Herbs', sortOrder: 40},
+    {name: 'Flowers', sortOrder: 50},
     {name: 'Desserts', sortOrder: 60},
     {name: 'Drinks', sortOrder: 70},
   ]);
 
   await Item.deleteMany({});
   const items = await Item.create([
-    {name: 'Hamburger', emoji: '🍔', category: categories[0], price: 5.95},
-    {name: 'Turkey Sandwich', emoji: '🥪', category: categories[0], price: 6.95},
-    {name: 'Hot Dog', emoji: '🌭', category: categories[0], price: 3.95},
-    {name: 'Crab Plate', emoji: '🦀', category: categories[1], price: 14.95},
-    {name: 'Fried Shrimp', emoji: '🍤', category: categories[1], price: 13.95},
-    {name: 'Whole Lobster', emoji: '🦞', category: categories[1], price: 25.95},
-    {name: 'Taco', emoji: '🌮', category: categories[2], price: 1.95},
-    {name: 'Burrito', emoji: '🌯', category: categories[2], price: 4.95},
-    {name: 'Pizza Slice', emoji: '🍕', category: categories[3], price: 3.95},
-    {name: 'Spaghetti', emoji: '🍝', category: categories[3], price: 7.95},
-    {name: 'Garlic Bread', emoji: '🍞', category: categories[3], price: 1.95},
-    {name: 'French Fries', emoji: '🍟', category: categories[4], price: 2.95},
-    {name: 'Green Salad', emoji: '🥗', category: categories[4], price: 3.95},
-    {name: 'Ice Cream', emoji: '🍨', category: categories[5], price: 1.95},
-    {name: 'Cup Cake', emoji: '🧁', category: categories[5], price: 0.95},
-    {name: 'Custard', emoji: '🍮', category: categories[5], price: 2.95},
-    {name: 'Strawberry Shortcake', emoji: '🍰', category: categories[5], price: 3.95},
-    {name: 'Milk', emoji: '🥛', category: categories[6], price: 0.95},
-    {name: 'Coffee', emoji: '☕', category: categories[6], price: 0.95},
-    {name: 'Mai Tai', emoji: '🍹', category: categories[6], price: 8.95},
-    {name: 'Beer', emoji: '🍺', category: categories[6], price: 3.95},
-    {name: 'Wine', emoji: '🍷', category: categories[6], price: 7.95},
+    {name: 'Boxwood', emoji: '🌳', category: categories[0], price: 49.99},
+    {name: 'Euonymus', emoji: '🏡', category: categories[0], price: 79.99},
+    {name: 'Palm Tree', emoji: '🌴', category: categories[1], price: 375.99},
+    {name: 'Pine Tree', emoji: '🌲', category: categories[1], price: 475.99},
+    {name: 'Apple Tree', emoji: '🍎', category: categories[2], price: 49.99},
+    {name: 'Peach Tree', emoji: '🍑', category: categories[2], price: 99.99},
+    {name: 'Rosemary', emoji: '🌿', category: categories[3], price: 14.99},
+    {name: 'Basil', emoji: '🪴', category: categories[3], price: 7.99},
+    {name: 'Mint', emoji: '🍵', category: categories[3], price: 3.99},
+    {name: 'Rose', emoji: '🌹', category: categories[4], price: 12.99},
+    {name: 'Tulip', emoji: '🌷', category: categories[4], price: 7.99},
+    {name: 'Sunflower', emoji: '🌻', category: categories[4], price: 6.99},
+    {name: 'Lotus', emoji: '🪷', category: categories[4], price: 14.99},
   ]);
 
   console.log(items)
