@@ -18,8 +18,8 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className="nav-buttons">
-      <Link to="/" className="buton btn-nav"> Home</Link>
-      &nbsp; | &nbsp;
+      {/* <Link to="/" className="buton btn-nav"> Home</Link>
+      &nbsp; | &nbsp; */}
       <Link to="/orders" className="buton btn-nav">Order History</Link>
       &nbsp; | &nbsp;
       <Link to="/orders/new" className="buton btn-nav">New Order</Link>

@@ -42,8 +42,6 @@ export default function NewOrderPage({ user, setUser }) {
         // 2. Update the cart state with the updated cart received from the server
         setCart(updatedCart);
 
-    // alert(`add item: ${itemId}`);
-
   }
 
   async function handleChangeQty(itemId, newQty) {

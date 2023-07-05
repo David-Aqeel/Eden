@@ -1,5 +1,4 @@
 // import * as usersService from '../../utilities/users-service';
-import { checkToken } from '../../utilities/users-service';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './OrderHistoryPage.css';
@@ -14,11 +13,6 @@ import OrderList from '../../components/OrderList/OrderList';
 export default function OrderHistoryPage({ user, setUser }) {
   const [orders, setOrders] = useState([]);
   const [activeOrder, setActiveOrder] = useState(null);
-
-  async function handleCheckToken() {
-          const expDate = await checkToken();
-          console.log(expDate);
-      }
 
   useEffect(function() {
     async function getOrders() {
@@ -44,7 +38,6 @@ export default function OrderHistoryPage({ user, setUser }) {
       />
       {/* Render the existing OrderDetail component */}
       <OrderDetail order={activeOrder} />
-      {/* <button onClick={handleCheckToken}></button> */}
     </main>
   );
 }
