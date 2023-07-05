@@ -44,7 +44,7 @@ export default function OrderHistoryPage({ user, setUser }) {
       />
       {/* Render the existing OrderDetail component */}
       <OrderDetail order={activeOrder} />
-      <button onClick={handleCheckToken}>Check When My Login Expires</button>
+      {/* <button onClick={handleCheckToken}></button> */}
     </main>
   );
 }
