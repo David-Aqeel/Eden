@@ -10,7 +10,7 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
     }
     const token = getToken();
     if (token) {
-        // Need to add an authorization header
+      // Need to add an authorization header
       // Ensure the headers object exists
       // Use the logical OR Assignment operator
       // options.headers = options.headers || {}; (or we can do)
